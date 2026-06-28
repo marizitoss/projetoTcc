@@ -20,7 +20,7 @@ Atributos de cada entidade do sistema.
 
 | Atributo          | Tipo             | Descrição                                             |
 | :---------------- | :--------------- | :---------------------------------------------------- |
-| jogador_id        | String           | chave estrangeira atrelando o inventario ao jogador   |
+| jogador_id        | String           | Chave estrangeira atrelando o inventário ao jogador   |
 | slots             | List\<SlotItem\> | Lista de slots com referência ao recurso e quantidade |
 | capacidade_maxima | Int              | Limite de slots disponíveis (a definir no MVP)        |
 
@@ -28,10 +28,12 @@ Atributos de cada entidade do sistema.
 
 ## SlotItem
 
-| Atributo   | Tipo    | Descrição                        |
-| :--------- | :------ | :------------------------------- |
-| recurso    | Recurso | Referência ao tipo de recurso    |
-| quantidade | Int     | Quantidade do recurso neste slot |
+| Atributo      | Tipo   | Descrição                            |
+| :------------ | :----- | :----------------------------------- |
+| id            | String | Identificador único do slot          |
+| inventario_id | String | Referencia o inventário dono do slot |
+| recurso_id    | String | Referencia o tipo de recurso         |
+| quantidade    | Int    | Quantidade do recurso neste slot     |
 
 ---
 
@@ -50,7 +52,7 @@ Atributos de cada entidade do sistema.
 | Atributo      | Tipo    | Descrição                                                |
 | :------------ | :------ | :------------------------------------------------------- |
 | id            | String  | Identificador único do golem                             |
-| jogador_id    | String  | foreign key do jogador dono do golem                     |
+| jogador_id    | String  | Chave estrangeira do jogador dono do golem               |
 | tipo          | Enum    | COLETOR \| MINERADOR \| TRANSPORTADOR                    |
 | runa_equipada | Runa    | Runa que define o comportamento do golem                 |
 | posicao_x     | Float   | Posição atual no mapa                                    |
@@ -103,12 +105,3 @@ Atributos de cada entidade do sistema.
 | tiles       | List\<Tile\>       | Grade de tiles que compõe o mapa |
 | construcoes | List\<Construcao\> | Construções posicionadas no mapa |
 | golems      | List\<Golem\>      | Golems ativos no mapa            |
-
-## SlotItem
-
-| Atributo      | Tipo | Descrição                            |
-| :------------ | :--- | :----------------------------------- | 
-| id            | Int  | Identificador único do slot          |
-| inventario_id | Int  | Referencia o inventário dono do slot |
-| recurso_id    | Int  | Referencia o tipo de recurso         |
-| quantidade    | Int  | Quantidade do recurso neste slot     | 
