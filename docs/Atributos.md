@@ -107,8 +107,8 @@ Atributos de cada entidade do sistema.
 ## SlotItem
 
 | Atributo      | Tipo | Descrição                            |
-| :------------ | :--- | :----------------------------------- | --- |
+| :------------ | :--- | :----------------------------------- | 
 | id            | Int  | Identificador único do slot          |
 | inventario_id | Int  | Referencia o inventário dono do slot |
 | recurso_id    | Int  | Referencia o tipo de recurso         |
-| quantidade    | Int  | Quantidade do recurso neste slot     |     |
+| quantidade    | Int  | Quantidade do recurso neste slot     | 
